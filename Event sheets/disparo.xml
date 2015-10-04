@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>disparo</name>
+    <events>
+        <event-block sid="3289477221610591">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="2173212104933772" type="Keyboard">
+                    <param id="0" name="Key">32 (Barra Espaciadora)</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="5440523208843743">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="8212168250915902" type="defensor">
+                            <param id="0" name="Instance variable">misiles_disponibles</param>
+                            <param id="1" name="Comparison">1</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="5596092834296765" type="defensor">
+                            <param id="0" name="Object">misil_defensor</param>
+                            <param id="1" name="Layer">1</param>
+                            <param id="2" name="Image point">defensor.BBoxTop</param>
+                        </action>
+                        <action id="0" name="Call function" sid="3008569856841104" type="Function">
+                            <param id="0" name="Name">&quot;reducir_misiles_disponibles_del_defensor&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="884828811857365">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8402357663415358" type="misil_defensor">
+                    <param id="0" name="Object">invasor_clase_2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7205359193507286" type="invasor_clase_2" />
+                <action id="-9" name="Destroy" sid="8059268673552633" type="misil_defensor" />
+                <action id="0" name="Call function" sid="2524112577238233" type="Function">
+                    <param id="0" name="Name">&quot;disparo_exitoso&quot;</param>
+                    <param id="1" name="Parameter {n}">invasor_clase_2.valor_puntaje</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9266333822848443">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="967807604743297" type="misil_invasor">
+                    <param id="0" name="Object">defensor</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="4997408118782974" type="misil_invasor" />
+                <action id="-9" name="Destroy" sid="1115505812409524" type="defensor" />
+                <action id="-11" name="Subtract from" sid="3260473393042555" type="System">
+                    <param id="0" name="Variable">actual_numero_de_misiles_invasores</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-15" name="Set visible" sid="4607741170621265" type="DERROTA2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="8313309865807835">
+            <conditions>
+                <condition id="-19" name="On destroyed" sid="1053833633599926" type="misil_invasor" />
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="5701204049647595" type="System">
+                    <param id="0" name="Variable">actual_numero_de_misiles_invasores</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="9147417630382286">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8289868173995383" type="defensor">
+                    <param id="0" name="Object">invasor_clase_2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="9273206937379338" type="invasor_clase_2" />
+                <action id="-9" name="Destroy" sid="9515936179825213" type="defensor" />
+                <action id="-15" name="Set visible" sid="2398225246722693" type="DERROTA2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5672542871084276">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="8470851753124218" type="misil_defensor">
+                    <param id="0" name="Object">Bufferer</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="54706197008302" type="invasor_clase_2" />
+                <action id="-9" name="Destroy" sid="2381062080491746" type="misil_defensor" />
+                <action id="0" name="Call function" sid="6308600387877145" type="Function">
+                    <param id="0" name="Name">&quot;disparo_exitoso&quot;</param>
+                    <param id="1" name="Parameter {n}">invasor_clase_2.valor_puntaje</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="2689746067055359">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5561280853608215" type="misil_invasor">
+                    <param id="0" name="Object">ciudad</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="7450439626119668" type="misil_invasor" />
+                <action id="-11" name="Subtract from" sid="8937132314831367" type="System">
+                    <param id="0" name="Variable">actual_numero_de_misiles_invasores</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-10" name="Set value" sid="1123574759603529" type="ciudad">
+                    <param id="0" name="Instance variable">Vidas</param>
+                    <param id="1" name="Value">ciudad.Vidas-1</param>
+                </action>
+                <action id="-9" name="Set value" sid="8388404095546022" type="System">
+                    <param id="0" name="Variable">VidasTotal</param>
+                    <param id="1" name="Value">VidasTotal-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="4938047785118663">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5743536510402077" type="misil_defensor">
+                    <param id="0" name="Object">ciudad</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2400268471700706" type="misil_defensor" />
+                <action id="-10" name="Set value" sid="3491026803403981" type="ciudad">
+                    <param id="0" name="Instance variable">Vidas</param>
+                    <param id="1" name="Value">ciudad.Vidas-1</param>
+                </action>
+                <action id="0" name="Call function" sid="6757626257970896" type="Function">
+                    <param id="0" name="Name">&quot;aumentar_misiles_disponibles_del_defensor&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+                <action id="-9" name="Set value" sid="3088032789142961" type="System">
+                    <param id="0" name="Variable">VidasTotal</param>
+                    <param id="1" name="Value">VidasTotal-1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3520699616752826">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="4772453968844778" type="ciudad">
+                    <param id="0" name="Instance variable">Vidas</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="2471887643516257" type="ciudad" />
+            </actions>
+        </event-block>
+        <event-block sid="8567456772985895">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="3579214309609959" type="System">
+                    <param id="0" name="Variable">VidasTotal</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="4549437304429805" type="DERROTA2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8807299755262568" type="defensor" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

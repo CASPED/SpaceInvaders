@@ -1,2 +1,0 @@
-# SpaceInvaders
-Ingeniería de Software

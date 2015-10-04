@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>New project</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>33weaybisjjos</unique-id>
+    <saved-with-version>21202</saved-with-version>
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="EightDir" version="1">8 Direction</behavior>
+        <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
+        <behavior author="Scirra" id="destroy" version="1">Destroy outside layout</behavior>
+    </used-behaviors>
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>853</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-type name="defensor" sid="4058237469865817">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="misiles_disponibles" sid="8117180753355374" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="8Direction" sid="4876356006969914">
+                    <behavior id="EightDir" />
+                </behavior-type>
+                <behavior-type name="BoundToLayout" sid="3000508844963379">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="movimiento" pingpong="0" repeatcount="1" repeatto="0" sid="1269933514569483" speed="5">
+                    <frame duration="1" hotspotX="0.489583" hotspotY="0.5" original-source="C:\Users\Deluxe\Desktop\ship.png">
+                        <collision-poly>
+                            <point x="0.65625" y="0.307143" />
+                            <point x="0.927083" y="0.55" />
+                            <point x="0.65625" y="0.8" />
+                            <point x="0.552083" y="0.957143" />
+                            <point x="0.197917" y="0.971429" />
+                            <point x="0.041667" y="0.55" />
+                            <point x="0.052083" y="0.0357143" />
+                            <point x="0.552083" y="0.0428572" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="1" loop="0" name="Animation2" pingpong="0" repeatcount="1" repeatto="0" sid="7040471775299116" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="misil_defensor" sid="3571516329420154">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="9273525064496519">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="6788338445025444">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4880137317421667" speed="5">
+                    <frame duration="1" hotspotX="0.514852" hotspotY="0.494505" original-source="C:\Users\Deluxe\Desktop\invader3.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="2634088946929345">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Function" sid="7434552679451465">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Text" sid="5984793967037546">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="invasor_clase_2" sid="4414151228258708">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Paso" sid="8506465926958261" type="number" />
+                <instance-variable name="valor_puntaje" sid="8841249909508123" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="BoundToLayout" sid="9550690654562806">
+                    <behavior id="bound" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="2" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="2601798697459392" speed="1">
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.52381" original-source="C:\Users\Deluxe\Desktop\Invasor ZIM\inv1.png">
+                        <collision-poly>
+                            <point x="0.192982" y="0.261905" />
+                            <point x="0.807018" y="0.261905" />
+                            <point x="0.982456" y="0.5" />
+                            <point x="0.807018" y="0.738095" />
+                            <point x="0.192982" y="0.738095" />
+                            <point x="0.0175439" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.52381" original-source="C:\Users\Deluxe\Desktop\Invasor ZIM\inv1b.png">
+                        <collision-poly>
+                            <point x="0.192982" y="0.261905" />
+                            <point x="0.807018" y="0.261905" />
+                            <point x="0.982456" y="0.5" />
+                            <point x="0.807018" y="0.738095" />
+                            <point x="0.192982" y="0.738095" />
+                            <point x="0.0175439" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="2" loop="0" name="Destruccion" pingpong="0" repeatcount="1" repeatto="0" sid="5087588762688793" speed="5">
+                    <frame duration="1" hotspotX="0.491228" hotspotY="0.488372" original-source="C:\Users\Deluxe\Desktop\invader3.png" />
+                    <frame duration="1" hotspotX="0.508772" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Mouse" sid="1650879996323131">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="misil_invasor" sid="4017293744397774">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="5593741501086148">
+                    <behavior id="Bullet" />
+                </behavior-type>
+                <behavior-type name="DestroyOutsideLayout" sid="1442238335856898">
+                    <behavior id="destroy" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8992746023262985" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="3539257190308411">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Deluxe\Desktop\space-invader fondo.jpg" />
+        </object-type>
+        <object-type name="Bufferer" sid="3498314210889819">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="8922416030351005" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite" sid="2309134705411067">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3141549280821871" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ciudad" sid="7880376389534258">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="Vidas" sid="7136258325466661" type="number" />
+            </instance-variables>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="4271819041333612" speed="5">
+                    <frame duration="1" hotspotX="0.500489" hotspotY="0.5" original-source="C:\Users\Deluxe\Desktop\Barrier.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite2" sid="7728423483664441">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="6666513358585771" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text2" sid="8314970987654984">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text3" sid="7344329229060406">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="DERROTA" sid="8547076417018415">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="DERROTA2" sid="8865509123646224">
+            <plugin id="Text" />
+        </object-type>
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout>Layout 1.xml</layout>
+    </layout-folder>
+    <event-folder>
+        <event-sheet>insercion_objetos.xml</event-sheet>
+        <event-sheet>main.xml</event-sheet>
+        <event-sheet>movimiento.xml</event-sheet>
+        <event-sheet>disparo.xml</event-sheet>
+        <event-sheet>funciones.xml</event-sheet>
+    </event-folder>
+    <global-instances>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Function" uid="4" />
+        <global-instance type="Mouse" uid="56" />
+    </global-instances>
+    <sounds-folder />
+    <music-folder />
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+    </files-folder>
+</c2project>

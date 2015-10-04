@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>movimiento</name>
+    <events>
+        <event-block sid="2973463328243349">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="3678552319800309" type="System">
+                    <param id="0" name="Interval (seconds)">TIEMPO_DE_PASO_PARA_INVASORES</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-1" name="Set X" sid="319813806801342" type="invasor_clase_2">
+                    <param id="0" name="X">invasor_clase_2.X+invasor_clase_2.Paso</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="8259506558089894">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="2738384562817726" type="System">
+                            <param id="0" name="Object">invasor_clase_2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5936948308407601">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="1462323190991163" type="invasor_clase_2">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">800</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="2411784447075683" type="Function">
+                                    <param id="0" name="Name">&quot;bajar_invasor_clase_2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="6191492986213205" type="Function">
+                                    <param id="0" name="Name">&quot;cambiar_orientacion_de_invasor_clase_2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="2454342152065091" type="Function">
+                                    <param id="0" name="Name">&quot;reducir_tiiempo_de_paso&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-24" name="Stop loop" sid="4583348104530273" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="5533900491990609">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="6601926718176716" type="invasor_clase_2">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="X co-ordinate">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="8527482195037294" type="Function">
+                                    <param id="0" name="Name">&quot;bajar_invasor_clase_2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="9311528578701805" type="Function">
+                                    <param id="0" name="Name">&quot;cambiar_orientacion_de_invasor_clase_2&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="0" name="Call function" sid="6671867128623474" type="Function">
+                                    <param id="0" name="Name">&quot;reducir_tiiempo_de_paso&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                                <action id="-24" name="Stop loop" sid="6390152082657418" type="System" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="4354703506827978">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="9034047930986963" type="System">
+                                    <param id="0" name="First value">int(random(20))</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">9</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="9186306761918482">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="9859970959510709" type="System">
+                                            <param id="0" name="Variable">actual_numero_de_misiles_invasores</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="4037883186553682" type="System">
+                                            <param id="0" name="Variable">actual_numero_de_misiles_invasores</param>
+                                            <param id="1" name="Value">1</param>
+                                        </action>
+                                        <action id="-3" name="Create object" sid="9113546799880641" type="System">
+                                            <param id="0" name="Object to create">misil_invasor</param>
+                                            <param id="1" name="Layer">1</param>
+                                            <param id="2" name="X">invasor_clase_2.X</param>
+                                            <param id="3" name="Y">invasor_clase_2.Y</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+    </events>
+</c2eventsheet>

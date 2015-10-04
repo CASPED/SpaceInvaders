@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>insercion_objetos</name>
+    <events>
+        <variable constant="0" name="VidasTotal" sid="8854458432171485" static="0" type="number">15</variable>
+        <variable constant="0" name="TIEMPO_DE_PASO_PARA_INVASORES" sid="6843520459412744" static="0" type="number">0.5</variable>
+        <variable constant="0" name="se_ha_bajado_ultimamente" sid="8543704931079877" static="0" type="number">0</variable>
+        <variable constant="0" name="actual_numero_de_misiles_invasores" sid="5784034949868152" static="0" type="number">0</variable>
+        <variable constant="1" name="NUMERO_DE_MISILES_invasores" sid="4138865112781578" static="0" type="number">3</variable>
+        <variable constant="0" name="Puntaje" sid="9420009873588556" static="0" type="number">0</variable>
+        <variable constant="1" name="LONGITUD_PASO" sid="9219024472607337" static="0" type="number">3</variable>
+        <variable constant="1" name="N_FILAS_INVASORES_1" sid="4567618590268066" static="0" type="number">2</variable>
+        <variable constant="1" name="N_COLUMNAS_INVASORES" sid="4070849427606166" static="0" type="number">5</variable>
+        <event-block sid="8496507185773278">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="1217290810291051" type="System" />
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="8306670415257014" type="Text">
+                    <param id="0" name="Text">&quot;Puntaje: &quot;&amp;Puntaje</param>
+                </action>
+                <action id="4" name="Set animation" sid="2692927956903068" type="invasor_clase_2">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
